@@ -5,7 +5,7 @@
     <style>
         body { 
             font-family: 'Arial', sans-serif; 
-            max-width: 600px; 
+            max-width: 500px; 
             margin: 0 auto; 
             padding: 20px; 
             background-color: #f5f5f5;
@@ -37,7 +37,7 @@
             border: 2px dashed #4CAF50;
             border-radius: 5px;
             background-color: #f9f9f9;
-            transition: all 0.3s ease;
+            transition: all 0.7s ease;
         }
         input[type="file"]:hover {
             background-color: #f0f0f0;
@@ -125,22 +125,21 @@
             const successMessage = document.getElementById('successMessage');
             
             if (fileInput.files.length > 0) {
-                // Show loading animation
+             
                 convertBtn.disabled = true;
                 convertBtn.textContent = 'Processing...';
                 loadingIndicator.style.display = 'block';
                 
-                // Hide form during processing
+             
                 document.querySelectorAll('.form-group').forEach(el => {
                     el.style.opacity = '0.5';
                 });
                 
-                // Simulate delay for demo (remove in production)
+                
                 setTimeout(() => {
                     loadingIndicator.style.display = 'none';
                     successMessage.style.display = 'block';
                     
-                    // In a real app, this would happen after the actual conversion
                     setTimeout(() => {
                         // Reset form
                         convertBtn.disabled = false;
@@ -157,3 +156,4 @@
 </body>
 
 </html>
+
